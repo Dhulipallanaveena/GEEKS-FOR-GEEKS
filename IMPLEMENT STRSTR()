@@ -1,0 +1,7 @@
+def strstr(s,x):
+    if x=="":
+        return 0
+    for i in range(len(s)+1-len(x)):
+        if s[i:i+len(x)]==x:
+            return i
+    return -1
