@@ -1,0 +1,7 @@
+class Solution:	
+    
+	def reverseInGroups(self, arr, N, K):
+	    res=[]
+	    for i in range(0,N,K):
+	        res.extend((arr[i:i+K])[::-1])
+	    print(res)
