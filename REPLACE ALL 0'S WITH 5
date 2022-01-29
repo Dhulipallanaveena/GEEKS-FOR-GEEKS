@@ -1,0 +1,10 @@
+def convertFive(n):
+    i,c=0,0
+    while n>0:
+        a=n%10
+        if a==0:
+            a+=5
+        c+=a*pow(10,i)
+        n=int(n/10)
+        i+=1
+    return c
