@@ -1,0 +1,13 @@
+class Solution:
+
+	def count(self,arr, n, x):
+	    return arr.count(x)
+      
+      OR
+class Solution:
+def count(self,arr,n,x):
+i=0
+for m in arr:
+if m==x:
+i+=1
+return i
