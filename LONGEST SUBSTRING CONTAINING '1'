@@ -1,0 +1,4 @@
+def maxlength(s):
+    l=s.split('0')
+    k=max(l)
+    return len(list(k))
