@@ -1,0 +1,6 @@
+class Solution:
+    def InOrder(self,root):
+        if root is None:
+            return []
+        return self.InOrder(root.left)+[root.data]+self.InOrder(root.right)
+        
