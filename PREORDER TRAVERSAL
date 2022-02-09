@@ -1,0 +1,25 @@
+#User function Template for python3
+
+
+
+'''
+# Node Class:
+class Node:
+    def _init_(self,val):
+        self.data = val
+        self.left = None
+        self.right = None
+'''
+#Function to return a list containing the preorder traversal of the tree.
+def preutil(root,a):
+    if root is None:
+        return
+    if root:
+        a.append(root.data)
+        preutil(root.left,a)
+        preutil(root.right,a)
+def preorder(root):
+    a=[]
+    preutil(root,a)
+    return a
+   
