@@ -1,0 +1,10 @@
+def isCircular(head):
+    if head:
+        current=head
+        while current.next:
+            current=current.next
+            if current.next==head:
+                return True
+        return False
+    else:
+        return False
