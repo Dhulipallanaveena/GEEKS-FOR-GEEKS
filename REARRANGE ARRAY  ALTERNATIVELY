@@ -1,0 +1,13 @@
+def rearrange(self,arr, n): 
+        ans=[0]*n
+        c=0
+        mid=n//2
+        if n%2==1:
+            ans[n-1]=arr[mid]
+        for i in range(mid):
+            ans[c]=arr[n-i-1]
+            c+=1
+            ans[c]=arr[i]
+            c+=1
+        arr[:]=ans[:]
+        return ans
