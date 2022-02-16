@@ -1,0 +1,9 @@
+def rev(q):
+    Stack=[]
+    while not q.empty():
+        Stack.append(q.queue[0])
+        q.get()
+    while len(Stack)!=0:
+        q.put(Stack[-1])
+        Stack.pop()
+    return q
