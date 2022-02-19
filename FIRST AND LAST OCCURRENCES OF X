@@ -1,0 +1,8 @@
+def find(arr,n,x):
+    if x not in arr:
+        return -1,-1
+    a=[]
+    for i in range(n):
+        if arr[i]==x:
+            a.append(i)
+    return a[0],a[len(a)-1]
