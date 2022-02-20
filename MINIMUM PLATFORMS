@@ -1,0 +1,22 @@
+def minimumPlatform(self,n,arr,dep):
+        arr = list(map(int, arr))
+        dep = list(map(int, dep))
+        dep = [x for _, x in sorted(zip(arr, dep))]
+        arr = sorted(arr)
+
+ 
+
+        platforms = []
+        for i in range(n):
+            platform_assigned = False
+            for p in range(len(platforms)):
+                if platforms[p] < arr[i]:
+                    platforms[p] = dep[i]
+                    platform_assigned = True
+                 
+                    break
+            if platform_assigned is not True:
+                platforms.append(dep[i])
+              
+        return len(platforms)
+        
