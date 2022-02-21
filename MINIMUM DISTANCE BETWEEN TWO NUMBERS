@@ -1,9 +1,29 @@
+import sys
+import math
+
 class Solution:
     def minDist(self, arr, n, x, y):
-        for i in range(n):
-            for j in range(i+1,n):
-                if x==arr[i] and  y==arr[j] or x==arr[j] and y==arr[i]:
-                    return abs(i-j)
+        minval=sys.maxsize
+        xindex=[]
+        yindex=[]
+        if x not in arr or y not in arr:
+            return -1
+        else:
+            for i in range(n):
+                if arr[i]==x:
+                    xindex.append(i)
+                if arr[i]==y:
+                    yindex.append(i)
+            for x in xindex:
+                for y in yindex:
+                    if x>y and x-y<minval:
+                        minval=x-y
+                    if y>x and y-x<minval:
+                        minval=y-x
+        return minval
+                        
+        
+        
         
         
     
