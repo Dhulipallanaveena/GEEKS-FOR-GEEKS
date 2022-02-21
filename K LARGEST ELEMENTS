@@ -1,0 +1,6 @@
+import heapq
+class Solution:
+    #Function to return k largest elements from an array.
+    def kLargest(self,li,n,k):
+        heapq.heapify(li)
+        return heapq.nlargest(k,li)
