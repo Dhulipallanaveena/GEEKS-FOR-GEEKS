@@ -1,0 +1,17 @@
+class Solution:
+    def trappingWater(self, arr,n):
+        left=0
+        right=n-1
+        lmaxi=0
+        rmaxi=0
+        result=0
+        while left<=right:
+            if rmaxi <=lmaxi:
+                result+=max(0,rmaxi-arr[right])
+                rmaxi=max(rmaxi,arr[right])
+                right-=1
+            else:
+                result+=max(0,lmaxi-arr[left])
+                lmaxi=max(lmaxi,arr[left])
+                left+=1
+        return result
