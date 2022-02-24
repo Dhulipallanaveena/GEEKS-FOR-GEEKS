@@ -1,0 +1,8 @@
+class Solution:
+    def print2largest(self,A,N):
+        A.sort(reverse=1)
+        largest1=A[0]
+        for x in A:
+            if x<largest1:
+                return x
+        return -1
